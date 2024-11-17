@@ -20,7 +20,8 @@
 
 ### Homebrew Casks
 
-| Cask  | Description           |
-| ----- | --------------------- |
-| warp  | Terminal              |
-| stats | System monitoring app |
+| Cask      | Description              |
+| --------- | ------------------------ |
+| warp      | Terminal                 |
+| stats     | System monitoring app    |
+| aerospace | AeroSpace config manager |

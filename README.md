@@ -20,6 +20,15 @@ This repository contains my personal configuration files for various tools and a
 - [`yabairc`](yabai/yabairc): Configuration file for the Yabai window manager, controlling window layouts, padding, and mouse behavior.
 - [`skhdrc`](skhd/skhdrc): Configuration file for the Skhd hotkey daemon, defining keyboard shortcuts for window management.
 
+### Update:
+
+- I started using [Aerospace](https://github.com/nikitabobko/AeroSpace) to do tiling window management.
+- This is a pretty cool tool that allows you to manage your windows using a keyboard.
+- It provides monitor management like set which windows go to which monitor.
+- It has a accordion layout that I really like.
+- It is very similar to using [i3](https://i3wm.org/) on Linux.
+- I have created a custom config file that you can find [here](aerospace/aerospace.toml).
+
 ## Applications
 
 [`apps.md`](zsh/apps.md) contains a list of productive applications I use on macOS, along with their descriptions and links.

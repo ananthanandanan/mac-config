@@ -1,0 +1,9 @@
+## Remove all files like .DS_Store, .AppleDouble, .LSOverride
+
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+## Remove all files like .env
+
+.env
