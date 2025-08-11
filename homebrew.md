@@ -6,22 +6,27 @@
 
 ### Formulae
 
-| Package | Description                                          |
-| ------- | ---------------------------------------------------- |
-| htop    | Interactive process viewer                           |
-| vim     | Highly configurable text editor                      |
-| nvim    | Modern version of vim                                |
-| ncdu    | CLI disk usage analyzer                              |
-| tmux    | Terminal multiplexer                                 |
-| fzf     | Command-line fuzzy finder                            |
-| bat     | Cat clone with syntax highlighting                   |
-| pipx    | Install and run Python apps in isolated environments |
-| zoxide  | Smarter cd command                                   |
+| Package                 | Description                                          |
+| ----------------------- | ---------------------------------------------------- |
+| htop                    | Interactive process viewer                           |
+| vim                     | Highly configurable text editor                      |
+| nvim                    | Modern version of vim                                |
+| ncdu                    | CLI disk usage analyzer                              |
+| tmux                    | Terminal multiplexer                                 |
+| fzf                     | Command-line fuzzy finder                            |
+| bat                     | Cat clone with syntax highlighting                   |
+| pipx                    | Install and run Python apps in isolated environments |
+| zoxide                  | Smarter cd command                                   |
+| lazygit                 | Git client                                           |
+| ffmpeg                  | Video converter                                      |
+| pyenv                   | Python version manager                               |
+| hashicorp/tap/terraform | Terraform                                            |
 
 ### Homebrew Casks
 
-| Cask      | Description              |
-| --------- | ------------------------ |
-| warp      | Terminal                 |
-| stats     | System monitoring app    |
-| aerospace | AeroSpace config manager |
+| Cask       | Description              |
+| ---------- | ------------------------ |
+| warp       | Terminal                 |
+| stats      | System monitoring app    |
+| aerospace  | AeroSpace config manager |
+| camcontrol | Camera control app       |

@@ -54,7 +54,30 @@ alias lvim="~/.local/bin/lvim"
 alias 8gb="ssh ananthan@8gbGPU"
 alias 24gb="ssh ananthan@24gbGPU"
 alias eusCPU="ssh ananthan@eusCPU"
-alias proximose="ssh ananthan@proximose"
+alias rudhra="ssh ananthan@rudhra"
+alias emc="ssh ananthan@emc"
+alias trishul="ssh ananthan@trishul"
+
+# Tmux Aliases
+# Add these lines to your .zshrc file
+
+# Alias to start a new tmux session
+alias tmuxnew='tmux new-session -s'
+
+# Alias to attach to an existing session
+alias tmuxattach='tmux attach-session -t'
+
+# Alias to list all tmux sessions
+alias tmuxlist='tmux ls'
+
+# Alias to kill a specific session
+alias tmuxkill='tmux kill-session -t'
+
+# Alias to kill all tmux sessions
+alias tmuxkillall='tmux kill-server'
+
+# Alias to switch to the last session
+alias tmuxlast='tmux switch-client -l'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -88,7 +111,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 ## Unset zsh-autosuggestions
 unset ZSH_AUTOSUGGEST_USE_ASYNC
 
-## command functions
+## command functions 
 ## Fuzzy Finder with cd command
 fcd() {
   local directory
@@ -98,3 +121,8 @@ fcd() {
 
 ## ZSH Setup on startup
 eval "$(zoxide init zsh)"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"

@@ -111,10 +111,11 @@ alt-4 = 'workspace 4'
 alt-a = 'workspace A' # Arc Browser
 alt-c = 'workspace C' # Cursor
 alt-n = 'workspace N' # Notion, Notes, Obsidian etc.
-alt-s = 'workspace S' # Spotify
+alt-s = 'workspace S' # Spotify, Apple Music
 alt-t = 'workspace T' # Teams, Telegram
 alt-w = 'workspace W' # Warp, Docker
-
+alt-m = 'workspace M' # Apple TV, Video Players etc.
+alt-p = 'workspace P' # Preview, Finder, etc.
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -127,11 +128,13 @@ alt-shift-n = 'move-node-to-workspace N'
 alt-shift-s = 'move-node-to-workspace S'
 alt-shift-t = 'move-node-to-workspace T'
 alt-shift-w = 'move-node-to-workspace W'
+alt-shift-m = 'move-node-to-workspace M'
+alt-shift-p = 'move-node-to-workspace P'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-# alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 alt-shift-f = 'fullscreen'
 
@@ -157,8 +160,8 @@ N = 'secondary'
 S = 'secondary'
 T = 'secondary'
 W = 'secondary'
-
-
+M = 'secondary'
+P = 'secondary'
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
@@ -183,8 +186,23 @@ if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace A'
 
 [[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+if.window-title-regex-substring = 'Picture-in-Picture'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace A'
+
+
+[[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
 run = 'move-node-to-workspace C'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.TV'
+run = ['layout tiling', 'move-node-to-workspace M']
 
 [[on-window-detected]]
 if.app-id = 'notion.id'
@@ -201,7 +219,11 @@ run = ['layout tiling', 'move-node-to-workspace N']
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
-run = 'move-node-to-workspace S'
+run = ['layout tiling', 'move-node-to-workspace S']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = ['layout tiling', 'move-node-to-workspace S']
 
 [[on-window-detected]]
 if.app-id = 'ru.keepcoder.Telegram'
@@ -211,14 +233,26 @@ run = ['layout tiling', 'move-node-to-workspace T']
 if.app-id = 'com.microsoft.teams2'
 run = ['layout tiling', 'move-node-to-workspace T']
 
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = ['layout tiling', 'move-node-to-workspace T']
+
 
 [[on-window-detected]]
 if.app-id = 'dev.warp.Warp-Stable'
 run = ['layout tiling', 'move-node-to-workspace W']
 
 [[on-window-detected]]
-if.app-id = 'com.docker.docker'
+if.app-id = 'com.electron.dockerdesktop'
 run = ['layout tiling', 'move-node-to-workspace W']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Preview'
+run = ['layout tiling', 'move-node-to-workspace P']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['layout tiling', 'move-node-to-workspace P']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
